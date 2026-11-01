@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manvi Restaurant | Jori Road, Pratappur - Online Order & Party Booking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Bebas+Neue&family=Cinzel:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-brand { font-family: 'Cinzel', serif; }
+    .font-display { font-family: 'Bebas Neue', cursive; letter-spacing: 1px; }
+    .red-gradient { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); }
+    .gold-gradient { background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%); }
+    .card-dark { background: rgba(20, 20, 24, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(220, 38, 38, 0.22); }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    @keyframes pulse-ring { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.03); opacity: 0.9; } }
+    .glow-btn { animation: pulse-ring 2.2s infinite ease-in-out; }
+  </style>
+</head>
+<body class="bg-[#0c0a09] text-slate-100 min-h-screen pb-32 selection:bg-red-600 selection:text-white">
+
+  <!-- TOP DEVELOPER NOTICE BAR (Ashish Sharma) -->
+  <aside aria-label="Developer Pitch" class="bg-gradient-to-r from-red-700 via-amber-600 to-emerald-700 text-white text-xs py-2 px-3 sm:px-4 shadow-lg sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center space-x-2 truncate">
+        <span class="bg-black/60 text-amber-300 font-extrabold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase border border-amber-400/30">EXCLUSIVE LIVE DEMO</span>
+        <span class="truncate font-medium text-[11px] sm:text-xs">Specially Designed for <b>MANVI RESTAURANT (Pratappur)</b></span>
+      </div>
+      <div class="flex items-center space-x-2 flex-shrink-0">
+        <span class="hidden md:inline text-[11px] text-amber-100">Live Website Banwayen: <b>Ashish Sharma</b></span>
+        <a href="https://wa.me/918292794750?text=Namaste%20Ashish%20ji,%20Manvi%20Restaurant%20Pratappur%20ka%20demo%20dekha.%20Website%20kaise%20live%20hogi%20batayein." class="bg-white text-slate-950 hover:bg-amber-100 font-bold px-2.5 py-1 rounded-full text-[11px] flex items-center gap-1.5 shadow transition">
+          <i class="fa-brands fa-whatsapp text-emerald-600 font-bold"></i> 8292794750
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- STORE HEADER -->
+  <header class="bg-[#14110e]/95 border-b border-red-600/30 sticky top-[33px] sm:top-[35px] z-40 backdrop-blur-md">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center text-white font-black text-xl shadow-lg">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <div>
+          <h1 class="font-brand text-base sm:text-xl font-extrabold tracking-wide text-white leading-tight">MANVI RESTAURANT</h1>
+          <p class="text-[11px] text-amber-400 font-medium tracking-wide flex items-center gap-1">
+            <i class="fa-solid fa-location-dot text-[10px] text-red-500"></i> Jori Road, Pratappur
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="tel:8789202344" class="bg-red-600 hover:bg-red-500 text-white text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow transition">
+          <i class="fa-solid fa-phone"></i> 8789202344
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#220d0e] via-[#150a0a] to-[#0c0a09] border-b border-red-500/20 px-4 pt-7 pb-9">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-red-600/20 border border-red-500/40 text-red-300 mb-3">
+        <i class="fa-solid fa-fire text-amber-400"></i> Everyday Delicious Foods • Indian | Tandoor | Chinese
+      </span>
+      <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-wide">
+        HANDI MUTTON, SPECIAL CHICKEN <br><span class="text-amber-400">& FRESH DESI PANEER</span>
+      </h2>
+      <p class="text-slate-300 text-xs sm:text-sm mt-2 max-w-xl mx-auto leading-relaxed">
+        हमारे यहाँ शादी पार्टी, बर्थडे पार्टी एवं किसी भी शुभ अवसर पर स्पेशल कैटरिंग ऑर्डर लिया जाता है।
+      </p>
+
+      <!-- Trust Badges -->
+      <div class="grid grid-cols-3 gap-2 sm:gap-4 max-w-md mx-auto mt-6 text-center">
+        <div class="card-dark p-2 sm:p-3 rounded-xl border-red-500/30">
+          <div class="text-red-400 font-bold text-sm sm:text-base flex items-center justify-center gap-1"><i class="fa-solid fa-bowl-rice text-xs"></i> Handi Special</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">500g & Plate Cuisines</div>
+        </div>
+        <div class="card-dark p-2 sm:p-3 rounded-xl border-amber-500/30">
+          <div class="text-amber-400 font-bold text-sm sm:text-base flex items-center justify-center gap-1"><i class="fa-solid fa-cake-candles text-xs"></i> Party Order</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Bulk Catering Ready</div>
+        </div>
+        <div class="card-dark p-2 sm:p-3 rounded-xl border-emerald-500/30">
+          <div class="text-emerald-400 font-bold text-sm sm:text-base flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp text-xs"></i> 0% Cut</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Direct WhatsApp Order</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH & FILTER BAR -->
+  <section class="sticky top-[86px] sm:top-[90px] z-30 bg-[#120f0d]/95 border-b border-red-500/20 py-3 shadow-md backdrop-blur-md">
+    <div class="max-w-5xl mx-auto px-4 space-y-2.5">
+      <div class="flex items-center gap-2">
+        <div class="relative flex-1">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+          <input type="text" id="search-input" oninput="handleSearch()" placeholder="Search Mutton Handi, Chicken Butter Masala, Paneer Afgani..." class="w-full pl-8 pr-3 py-1.5 bg-black/60 border border-slate-700 rounded-xl text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-red-500">
+        </div>
+        <div class="flex items-center bg-black/60 border border-slate-700 rounded-xl p-1 text-[11px]">
+          <button id="veg-all" onclick="setDietFilter('all')" class="px-2.5 py-0.5 rounded-lg font-bold bg-red-600 text-white">All</button>
+          <button id="veg-only" onclick="setDietFilter('veg')" class="px-2 py-0.5 rounded-lg text-emerald-400 font-medium hover:text-white">Veg</button>
+          <button id="nonveg-only" onclick="setDietFilter('nonveg')" class="px-2 py-0.5 rounded-lg text-red-400 font-medium hover:text-white">Non-Veg</button>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 overflow-x-auto scrollbar-hide text-xs pt-1">
+        <button onclick="filterCategory('all', this)" class="cat-pill active-cat px-3.5 py-1.5 rounded-xl font-bold bg-red-600 text-white whitespace-nowrap transition">All Dishes</button>
+        <button onclick="filterCategory('mutton', this)" class="cat-pill px-3.5 py-1.5 rounded-xl font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Mutton Specials</button>
+        <button onclick="filterCategory('chicken', this)" class="cat-pill px-3.5 py-1.5 rounded-xl font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Chicken Items</button>
+        <button onclick="filterCategory('paneer', this)" class="cat-pill px-3.5 py-1.5 rounded-xl font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Paneer Dishes</button>
+        <button onclick="filterCategory('mashroom', this)" class="cat-pill px-3.5 py-1.5 rounded-xl font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Mushroom Specials</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU LIST -->
+  <main class="max-w-5xl mx-auto px-4 mt-6">
+    <div id="empty-state" class="hidden text-center py-12 card-dark rounded-2xl">
+      <i class="fa-solid fa-utensils text-slate-500 text-4xl mb-3"></i>
+      <h3 class="text-sm font-bold text-slate-300">Dish nahi mili</h3>
+      <p class="text-xs text-slate-500 mt-1">Dusra dish name search karein (e.g. Mutton, Chicken, Paneer).</p>
+    </div>
+
+    <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Items generated dynamically -->
+    </div>
+  </main>
+
+  <!-- PARTY / WEDDING CATERING BANNER -->
+  <section class="max-w-5xl mx-auto px-4 mt-10">
+    <div class="card-dark rounded-2xl p-5 sm:p-6 border-amber-500/40 bg-gradient-to-r from-[#1c120c] via-[#24140b] to-[#170e0a] flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <span class="inline-block bg-amber-500/20 text-amber-300 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wider border border-amber-500/30">Party & Shadi Catering</span>
+        <h3 class="text-lg sm:text-xl font-bold text-white mt-1">Shaadi, Birthday Ya Party Ka Bulk Order?</h3>
+        <p class="text-xs text-slate-300 mt-1">Pratappur aur aas-paas ke area ke liye special catering & parcel booking WhatsApp par direct confirm karein.</p>
+      </div>
+      <a href="https://wa.me/918789202344?text=Namaste%20Manvi%20Restaurant,%20humein%20party/event%20ke%20liye%20bulk%20food%20order%20ki%20jaankari%20chahiye." target="_blank" class="w-full md:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-5 py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 whitespace-nowrap transition shadow-lg">
+        <i class="fa-brands fa-whatsapp text-sm font-bold"></i> Party Order WhatsApp Karein
+      </a>
+    </div>
+  </section>
+
+  <!-- DEVELOPER SALES CLOSING CARD (Ashish Sharma) -->
+  <section class="max-w-5xl mx-auto px-4 mt-8 space-y-6">
+    <div class="rounded-2xl p-6 sm:p-8 bg-gradient-to-br from-[#1a0e0e] via-[#211111] to-[#121c15] border border-red-500/40 shadow-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div class="max-w-xl">
+        <span class="inline-block bg-red-600/20 text-red-300 border border-red-500/40 px-2.5 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider mb-2">
+          FOR MANVI RESTAURANT OWNER (Baba Ji)
+        </span>
+        <h3 class="text-xl sm:text-2xl font-bold text-white font-brand">
+          Pratappur & Jori Road Par Direct Digital Ordering Shuru Karein
+        </h3>
+        <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+          Grahak ab phone par poora menu rate dekhkar seedha aapke WhatsApp (<b>8789202344 / 9507063072</b>) par order bhej sakega. Har order par 100% munafa aapka rahega.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 mt-4 text-xs text-slate-300 font-medium">
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Counter QR Standee Free</span>
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> 1 Saal Ki Hosting Free</span>
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Rate Kabhi Bhi Update Hoga</span>
+        </div>
+      </div>
+
+      <div class="card-dark p-4 rounded-xl border-red-500/30 flex flex-col items-center text-center w-full md:w-auto min-w-[240px]">
+        <div class="w-12 h-12 rounded-full bg-red-600/20 border border-red-500/40 flex items-center justify-center text-red-400 text-xl font-bold mb-2">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <span class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Web Developer</span>
+        <h4 class="text-base font-extrabold text-white mt-0.5">Ashish Sharma</h4>
+        <span class="text-xs text-amber-400 font-bold mb-3">📞 8292794750</span>
+        
+        <a href="https://wa.me/918292794750?text=Namaste%20Ashish%20ji,%20Manvi%20Restaurant%20Pratappur%20ka%20demo%20dekha.%20Website%20kaise%20live%20hogi%20batayein." target="_blank" class="w-full bg-gradient-to-r from-red-600 to-amber-500 hover:from-red-500 hover:to-amber-400 text-white font-bold py-2 px-4 rounded-lg text-xs flex items-center justify-center gap-2 transition shadow-md">
+          <i class="fa-brands fa-whatsapp text-sm font-bold"></i> Contact Ashish Sharma
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING CART DRAWER -->
+  <aside aria-label="Order Cart Drawer" id="cart-drawer" class="fixed bottom-0 left-0 right-0 bg-[#120f0d]/95 border-t border-red-500/30 p-3 sm:p-4 z-40 transition-all duration-300 transform translate-y-full backdrop-blur-md">
+    <div class="max-w-4xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-lg shadow-lg relative">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="badge-count" class="absolute -top-1.5 -right-1.5 bg-amber-500 text-slate-950 text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center border-2 border-slate-950">0</span>
+        </div>
+        <div>
+          <div class="text-[11px] text-slate-400 uppercase font-semibold">Total Order Value</div>
+          <div class="text-base sm:text-lg font-extrabold text-amber-400">₹<span id="total-price">0</span></div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button onclick="clearCart()" class="text-slate-400 hover:text-red-400 text-xs px-2.5 py-2 transition" title="Clear All">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+        <button onclick="openCheckoutModal()" class="glow-btn bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow-xl transition">
+          <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Order (Manvi Restaurant)
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ADDRESS & CONFIRM MODAL -->
+  <div id="checkout-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-[#181310] border border-red-500/40 rounded-2xl w-full max-w-md p-5 space-y-4 shadow-2xl">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h3 class="font-bold text-white text-base flex items-center gap-2">
+          <i class="fa-solid fa-receipt text-red-500"></i> Delivery & Contact Details
+        </h3>
+        <button onclick="closeCheckoutModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block text-slate-400 mb-1 font-medium">Aapka Naam (Customer Name):</label>
+          <input type="text" id="cust-name" placeholder="E.g. Rahul Kumar" class="w-full bg-black/60 border border-slate-700 rounded-lg p-2.5 text-slate-200 focus:outline-none focus:border-red-500">
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1 font-medium">Delivery Address / Landmark (Pratappur):</label>
+          <input type="text" id="cust-address" placeholder="E.g. Jori Road, Near Market / Dhaba" class="w-full bg-black/60 border border-slate-700 rounded-lg p-2.5 text-slate-200 focus:outline-none focus:border-red-500">
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1 font-medium">Order Type:</label>
+          <select id="order-type" class="w-full bg-black/60 border border-slate-700 rounded-lg p-2.5 text-slate-200 focus:outline-none focus:border-red-500">
+            <option value="Home Delivery Parcel">Home Delivery / Parcel</option>
+            <option value="Dine-in Pre-order">Dine-in Pre-order (Table par ready)</option>
+            <option value="Party Bulk Order">Party / Bulk Catering Order</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="pt-2 border-t border-slate-800 flex items-center justify-between">
+        <div>
+          <span class="text-[11px] text-slate-400">Total Payable:</span>
+          <div class="text-base font-black text-amber-400">₹<span id="modal-total">0</span></div>
+        </div>
+        <button onclick="submitOrderToManvi()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition">
+          <i class="fa-brands fa-whatsapp text-sm"></i> Send to WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // VERIFIED EXACT MENU AND RATES OF MANVI RESTAURANT
+    const dishes = [
+      // MUTTON SPECIALS
+      {
+        id: "m1",
+        title: "Mutton Handi (500g)",
+        category: "mutton",
+        diet: "nonveg",
+        price: 600,
+        portion: "500 Grams",
+        badge: "Chef Signature",
+        desc: "Slow-cooked earthen clay handi mutton with rich Bihari aroma & whole garlic cloves.",
+        img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "m2",
+        title: "Mutton Handi Plate (4 Pcs)",
+        category: "mutton",
+        diet: "nonveg",
+        price: 260,
+        portion: "4 Pieces",
+        badge: "Bestseller Plate",
+        desc: "Clay pot handi mutton gravy served with 4 tender pieces.",
+        img: "https://images.unsplash.com/photo-1545247181-516773ca83f3?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "m3",
+        title: "Mutton Korma (8 Pcs)",
+        category: "mutton",
+        diet: "nonveg",
+        price: 320,
+        portion: "8 Pieces",
+        badge: "Royal Rich Gravy",
+        desc: "Mughlai style slow-cooked tender mutton korma in fried onion curd paste.",
+        img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "m4",
+        title: "Mutton Kadhai (4 Pcs)",
+        category: "mutton",
+        diet: "nonveg",
+        price: 240,
+        portion: "4 Pieces",
+        badge: "Spicy & Thick",
+        desc: "Cooked in iron wok kadhai with capsicum, freshly pounded coriander & red chilies.",
+        img: "https://images.unsplash.com/photo-1545247181-516773ca83f3?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "m5",
+        title: "Mutton Mix Special",
+        category: "mutton",
+        diet: "nonveg",
+        price: 280,
+        portion: "Special Portion",
+        badge: "Special Selection",
+        desc: "Chef's mixed mutton curry with spicy blended gravy & succulent meat.",
+        img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "m6",
+        title: "Mutton Curry (10 Pcs)",
+        category: "mutton",
+        diet: "nonveg",
+        price: 310,
+        portion: "10 Pieces",
+        badge: "Family Pack",
+        desc: "Traditional desi home-style mutton curry with 10 soft pieces in aromatic thin gravy.",
+        img: "https://images.unsplash.com/photo-1545247181-516773ca83f3?w=600&auto=format&fit=crop&q=80"
+      },
+
+      // CHICKEN SPECIALS
+      {
+        id: "c1",
+        title: "Special White Chicken",
+        category: "chicken",
+        diet: "nonveg",
+        price: 310,
+        portion: "Special Dish",
+        badge: "Restaurant Special",
+        desc: "Velvety mild white cashew & cream gravy chicken infused with black pepper and herbs.",
+        img: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "c2",
+        title: "Chicken Butter Masala",
+        category: "chicken",
+        diet: "nonveg",
+        price: 180,
+        portion: "Full Portion",
+        badge: "All-Time Favorite",
+        desc: "Juicy chicken roasted and simmered in smooth tomato butter cream gravy.",
+        img: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "c3",
+        title: "Chicken Korma",
+        category: "chicken",
+        diet: "nonveg",
+        price: 200,
+        portion: "Rich Portion",
+        badge: "Mughlai Style",
+        desc: "Slow-cooked chicken in aromatic spices, brown onion paste and creamy yogurt gravy.",
+        img: "https://images.unsplash.com/photo-1545247181-516773ca83f3?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "c4",
+        title: "Chicken Afgani",
+        category: "chicken",
+        diet: "nonveg",
+        price: 260,
+        portion: "Rich & Creamy",
+        badge: "Afghani Spices",
+        desc: "Mildly spiced tandoori grilled chicken tossed with curd, cream and butter.",
+        img: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "c5",
+        title: "Chicken Curry",
+        category: "chicken",
+        diet: "nonveg",
+        price: 140,
+        portion: "Standard Plate",
+        badge: "Desi Dhaba Style",
+        desc: "Spicy everyday chicken curry cooked with mustard oil, onions and garam masala.",
+        img: "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "c6",
+        title: "Chicken do Pyazza",
+        category: "chicken",
+        diet: "nonveg",
+        price: 220,
+        portion: "Full Plate",
+        badge: "Onion Rich",
+        desc: "Chicken prepared with double sautéed caramelized onion cubes in thick gravy.",
+        img: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&auto=format&fit=crop&q=80"
+      },
+
+      // PANEER SPECIALS
+      {
+        id: "p1",
+        title: "Paneer Butter Masala",
+        category: "paneer",
+        diet: "veg",
+        price: 220,
+        portion: "Full Portion",
+        badge: "Veg Bestseller",
+        desc: "Soft fresh cottage cheese cubes cooked in rich silky tomato butter gravy.",
+        img: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "p2",
+        title: "Paneer Do Pyaza",
+        category: "paneer",
+        diet: "veg",
+        price: 200,
+        portion: "Full Portion",
+        badge: "Classic North Indian",
+        desc: "Diced paneer cooked with crisp onions in savory, spicy gravy.",
+        img: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "p3",
+        title: "Paneer Kadhai",
+        category: "paneer",
+        diet: "veg",
+        price: 200,
+        portion: "Full Portion",
+        badge: "Wok Tossed",
+        desc: "Paneer cooked with bell peppers and roasted freshly ground kadhai spices.",
+        img: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "p4",
+        title: "Paneer Afgani",
+        category: "paneer",
+        diet: "veg",
+        price: 260,
+        portion: "Royal Delight",
+        badge: "Creamy Afghani",
+        desc: "Paneer simmered with cashews, white pepper and malai in creamy gravy.",
+        img: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&auto=format&fit=crop&q=80"
+      },
+
+      // MUSHROOM SPECIALS
+      {
+        id: "sh1",
+        title: "Mashroom Masala",
+        category: "mashroom",
+        diet: "veg",
+        price: 200,
+        portion: "Full Portion",
+        badge: "Farm Fresh",
+        desc: "Tender button mushrooms tossed in spicy onion tomato masala gravy.",
+        img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "sh2",
+        title: "Mashroom do Pyaza",
+        category: "mashroom",
+        diet: "veg",
+        price: 220,
+        portion: "Full Portion",
+        badge: "Chef Special",
+        desc: "Juicy mushrooms cooked with square crunchy onions and rich brown curry.",
+        img: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&auto=format&fit=crop&q=80"
+      }
+    ];
+
+    let cart = {};
+    let activeCategory = 'all';
+    let activeDiet = 'all';
+    let searchQuery = '';
+
+    function renderDishes() {
+      const container = document.getElementById('menu-grid');
+      const emptyState = document.getElementById('empty-state');
+
+      const filtered = dishes.filter(item => {
+        const matchCategory = activeCategory === 'all' || item.category === activeCategory;
+        const matchDiet = activeDiet === 'all' || item.diet === activeDiet;
+        const matchSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                            item.desc.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchCategory && matchDiet && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      container.innerHTML = filtered.map(dish => {
+        const qty = cart[dish.id] || 0;
+        return `
+          <div class="card-dark rounded-2xl overflow-hidden hover:border-red-500/50 transition-all duration-300 flex flex-col justify-between group">
+            <div class="relative h-44 sm:h-48 overflow-hidden bg-black">
+              <img src="${dish.img}" alt="${dish.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&auto=format&fit=crop&q=80'">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0c0a09] via-[#0c0a09]/30 to-transparent"></div>
+              
+              <div class="absolute top-3 left-3 flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider flex items-center gap-1 shadow-md ${dish.diet === 'veg' ? 'bg-emerald-600 text-white' : 'bg-red-600 text-white'}">
+                  <span class="w-1.5 h-1.5 rounded-full ${dish.diet === 'veg' ? 'bg-emerald-200' : 'bg-red-200'}"></span>
+                  ${dish.diet === 'veg' ? 'VEG' : 'NON-VEG'}
+                </span>
+                ${dish.portion ? `<span class="bg-black/70 backdrop-blur-sm text-amber-300 border border-amber-500/30 text-[10px] font-semibold px-2 py-0.5 rounded-md">${dish.portion}</span>` : ''}
+              </div>
+
+              <div class="absolute bottom-3 right-3 bg-red-600 text-white font-black text-sm px-2.5 py-1 rounded-lg shadow-lg">
+                ₹${dish.price}
+              </div>
+            </div>
+
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <h4 class="font-bold text-white text-base leading-snug group-hover:text-red-400 transition-colors">${dish.title}</h4>
+                  <span class="text-[10px] bg-red-950/80 text-red-300 border border-red-500/30 px-2 py-0.5 rounded font-semibold whitespace-nowrap">${dish.badge}</span>
+                </div>
+                <p class="text-slate-400 text-xs mt-1.5 line-clamp-2 leading-relaxed">${dish.desc}</p>
+              </div>
+
+              <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-800/80">
+                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1">
+                  <i class="fa-solid fa-fire text-[10px] text-red-500"></i> Hot & Fresh
+                </span>
+                
+                ${qty > 0 ? `
+                  <div class="flex items-center bg-black border border-red-500/50 rounded-xl overflow-hidden shadow">
+                    <button onclick="changeQty('${dish.id}', -1)" class="w-8 h-8 flex items-center justify-center bg-red-600/20 hover:bg-red-600/30 text-red-400 font-bold transition">-</button>
+                    <span class="w-8 text-center text-xs font-black text-white">${qty}</span>
+                    <button onclick="changeQty('${dish.id}', 1)" class="w-8 h-8 flex items-center justify-center bg-red-600/20 hover:bg-red-600/30 text-red-400 font-bold transition">+</button>
+                  </div>
+                ` : `
+                  <button onclick="changeQty('${dish.id}', 1)" class="bg-red-600 hover:bg-red-500 text-white font-bold px-4 py-1.5 rounded-xl text-xs flex items-center gap-1.5 shadow transition">
+                    <i class="fa-solid fa-plus text-[10px]"></i> Add
+                  </button>
+                `}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach(p => {
+        p.classList.remove('active-cat', 'bg-red-600', 'text-white');
+        p.classList.add('bg-slate-800', 'text-slate-300');
+      });
+      btn.classList.remove('bg-slate-800', 'text-slate-300');
+      btn.classList.add('active-cat', 'bg-red-600', 'text-white');
+      renderDishes();
+    }
+
+    function setDietFilter(diet) {
+      activeDiet = diet;
+      ['veg-all', 'veg-only', 'nonveg-only'].forEach(id => {
+        const btn = document.getElementById(id);
+        btn.classList.remove('bg-red-600', 'text-white', 'bg-emerald-600');
+      });
+
+      if (diet === 'all') {
+        document.getElementById('veg-all').classList.add('bg-red-600', 'text-white');
+      } else if (diet === 'veg') {
+        document.getElementById('veg-only').classList.add('bg-emerald-600', 'text-white');
+      } else {
+        document.getElementById('nonveg-only').classList.add('bg-red-600', 'text-white');
+      }
+      renderDishes();
+    }
+
+    function handleSearch() {
+      searchQuery = document.getElementById('search-input').value;
+      renderDishes();
+    }
+
+    function changeQty(id, delta) {
+      if (!cart[id]) cart[id] = 0;
+      cart[id] += delta;
+      if (cart[id] <= 0) delete cart[id];
+      renderDishes();
+      updateDrawer();
+    }
+
+    function clearCart() {
+      cart = {};
+      renderDishes();
+      updateDrawer();
+    }
+
+    function updateDrawer() {
+      const drawer = document.getElementById('cart-drawer');
+      const badge = document.getElementById('badge-count');
+      const totalSpan = document.getElementById('total-price');
+
+      let count = 0;
+      let total = 0;
+
+      for (let id in cart) {
+        const dish = dishes.find(d => d.id === id);
+        count += cart[id];
+        total += dish.price * cart[id];
+      }
+
+      badge.innerText = count;
+      totalSpan.innerText = total;
+
+      if (count > 0) {
+        drawer.classList.remove('translate-y-full');
+      } else {
+        drawer.classList.add('translate-y-full');
+      }
+    }
+
+    function openCheckoutModal() {
+      let total = 0;
+      for (let id in cart) {
+        const dish = dishes.find(d => d.id === id);
+        total += dish.price * cart[id];
+      }
+      document.getElementById('modal-total').innerText = total;
+      document.getElementById('checkout-modal').classList.remove('hidden');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkout-modal').classList.add('hidden');
+    }
+
+    function submitOrderToManvi() {
+      const name = document.getElementById('cust-name').value.trim() || "Customer";
+      const addr = document.getElementById('cust-address').value.trim() || "Pratappur/Jori Road Counter";
+      const otype = document.getElementById('order-type').value;
+
+      let orderText = "*NEW FOOD ORDER - MANVI RESTAURANT*%0A";
+      orderText += "Location: Jori Road, Pratappur%0A";
+      orderText += "-----------------------------%0A";
+      orderText += `*Customer:* ${name}%0A`;
+      orderText += `*Address / Landmark:* ${addr}%0A`;
+      orderText += `*Order Type:* ${otype}%0A`;
+      orderText += "-----------------------------%0A";
+      orderText += "*ORDER ITEMS:*%0A";
+
+      let total = 0;
+      for (let id in cart) {
+        const dish = dishes.find(d => d.id === id);
+        const itemTotal = dish.price * cart[id];
+        total += itemTotal;
+        orderText += `• ${dish.title} (${dish.portion}) x ${cart[id]} = ₹${itemTotal}%0A`;
+      }
+
+      orderText += "-----------------------------%0A";
+      orderText += `*Grand Total:* ₹${total}%0A`;
+      orderText += "%0AKripya order confirm karein aur preparation time batayein.";
+
+      // Verified Manvi Restaurant WhatsApp Contact: 8789202344
+      window.open(`https://wa.me/918789202344?text=${orderText}`, '_blank');
+      closeCheckoutModal();
+    }
+
+    renderDishes();
+  </script>
+</body>
+</html>
